@@ -1,7 +1,19 @@
 @use './variables.scss';
 
 .hero {
-  margin: 2.5rem 0;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+  gap: 100px;
+
+  @media (max-width: 769px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+  }
 
   &__title {
     font-size: 2.3rem;
@@ -11,5 +23,27 @@
     span {
       color: variables.$second-color;
     }
+  }
+
+  &__btn {
+    margin-top: 1.2rem;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    color: variables.$second-color;
+    background: #F5F8FA;
+    font-weight: 500;
+    border-radius:5px;
+    transition: all 200ms;
+    filter: drop-shadow(1px 1px 2px variables.$second-color);
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+
+  img {
+    max-width:550px;
+    width: 100%;
+    filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.6));
   }
 }

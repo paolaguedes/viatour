@@ -1,5 +1,5 @@
 <?php 
-  include_once('./php/connection.php');
+  session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -18,8 +18,6 @@
     <link rel="shortcut icon" href="./img/aviao.png" type="image/x-icon">
   </head>
   <body>
-    <div class="background"></div>
-
     <div class="wrapper">
       <header class="header">
         <img src="./img/logo.svg" class="header__logo">
@@ -33,15 +31,74 @@
       </header>
       <main>
         <section class="hero">
+          <div>
+            <small>Chegou a hora de tirar os sonhos do papel.</small>
           <h2 class="hero__title">
             Viaje com a <span>segurança</span> e a <span>tranquilidade</span> que
             você merece.
           </h2>
+          <a href="#cadastro" class="hero__btn">Cadastre-se já</a>
+          </div>
+          <img src="./img/hero.png"/>
         </section>
-        <section id="planos"></section>
+        <section id="planos">
+          <h2 class="planos__title">Conheça nossos planos</h2>
+          <div  class="planos">
+          <article class="planos__card">
+            <img src="./img/mala.png"/>
+            <h4>Viagem para o exterior</h4>
+            <p>lorem ipsum dolor sit am.</p>
+            <a href="#0" class="planos__btn">Saiba mais.</a>
+          </article>
+          <article class="planos__card">
+            <img src="./img/mala.png"/>
+            <h4>Viagem para o exterior</h4>
+            <p>lorem ipsum dolor sit am.</p>
+            <a href="#0" class="planos__btn">Saiba mais.</a>
+          </article>
+          <article class="planos__card">
+            <img src="./img/mala.png"/>
+            <h4>Viagem para o exterior</h4>
+            <p>lorem ipsum dolor sit am.</p>
+            <a href="#0" class="planos__btn">Saiba mais.</a>
+          </article>
+          <article class="planos__card">
+            <img src="./img/mala.png"/>
+            <h4>Viagem para o exterior</h4>
+            <p>lorem ipsum dolor sit am.</p>
+            <a href="#0" class="planos__btn">Saiba mais.</a>
+          </article>
+          </div>
+          
+        </section>
+        <section id="sobre" class="container-sobre">
+          <h2 class="sobre__title">O que falam de nós</h2>
+          <div  class="sobre">
+          <article class="sobre__card">
+            <img src="./img/avatar.png"/>
+            <p>"Com certeza o melhor investimento que fiz, indico supeer ❤"</p>
+            <small>Ana Paula</small>
+          </article>
+          <article class="sobre__card">
+            <img src="./img/avatar.png"/>
+            <p>"Com certeza o melhor investimento que fiz, indico supeer ❤"</p>
+            <small>Ana Paula</small>
+          </article>
+          <article class="sobre__card">
+            <img src="./img/avatar.png"/>
+            <p>"Com certeza o melhor investimento que fiz, indico supeer ❤"</p>
+            <small>Ana Paula</small>
+          </article>
+          </div>
+          
+        </section>
         <section id="cadastro" class="cadastro">
-          <form class="cadastro__form" action="" method="post">
-            <fieldset class="cadastro__dados">
+          <form class="cadastro__form" action="./php/cadastro.php" method="POST">
+            
+          <fieldset class="cadastro__dados">
+            <legend>          
+              <h2>Cadastre-se grátis</h2>
+            </legend>
               <label>
                 Nome*
                 <input type="text" name="nome" placeholder="" required/>
@@ -101,9 +158,29 @@
 
             <input class="cadastro__btn" type="reset" value="Limpar" />
             <input class="cadastro__btn submit" type="submit" id="submit" value="Cadastrar" />
+
           </form>
         </section>
       </main>
+      <footer class="footer">
+        <img src="./img/aviao.png"/>
+            <p class="footer__logo">viatour</p>
+            <address class="footer__adress">
+                <p>
+                    Av. Brigadeiro de Faria Lima - 5680
+                    </p>
+                <p> 
+                    Vila São José
+                </p>
+                <p>
+                    São José do Rio Preto - SP
+                </p>
+            </address>
+            <div class="footer__tel">
+                <p>(17) 3225-2967</p>
+                <p>(17) 3225-2967</p>
+            </div>
+      </footer>
     </div>
     <script type="module" src="./main.js"></script>
   </body>

@@ -22,5 +22,5 @@ export function handleEnd(e) {
       cidade.value = ''
       estado.value = ''
     })
-  e.preventDefault()
+  // e.preventDefault()
 }

@@ -19,18 +19,33 @@
   &__form {
     background: variables.$second-color;
     padding: 70px;
+    color: variables.$primary-color;
+
+    @media (max-width: 769px){
+      padding: 20px;
+    }
   }
 
   &__dados {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 30px;
+
+    @media (max-width: 769px){
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__contato {
     display: grid;
     grid-template-columns: 300px 300px;
     gap: 30px;
+
+    @media (max-width: 769px){
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__endereco {
