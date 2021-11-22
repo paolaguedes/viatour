@@ -1,0 +1,15 @@
+@use './variables.scss';
+
+.hero {
+  margin: 2.5rem 0;
+
+  &__title {
+    font-size: 2.3rem;
+    max-width:500px;
+    width: 100%;
+
+    span {
+      color: variables.$second-color;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@use './variables.scss';
+
+.background {
+  position: absolute;
+  background: variables.$bg-transparent;
+  width: 1400px;
+  height: 900px;
+  top: -500px;
+  left: -400px;
+  z-index: -1;
+  transform: rotate(-30deg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    width: 200px;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__link {
+    color: variables.$second-color;
+    font-size: 1.2rem;
+    transition: all 200ms;
+
+    &:hover{
+      opacity: .9;
+    }
+  }
+}

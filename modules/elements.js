@@ -1,0 +1,5 @@
+export const cep = document.getElementById("cep")
+export const rua = document.getElementById("rua")
+export const cidade = document.getElementById("cidade")
+export const estado = document.getElementById("estado")
+export const endereco = document.getElementById("endereco")
