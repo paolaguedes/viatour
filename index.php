@@ -119,11 +119,11 @@
             <fieldset class="cadastro__contato">
               <label>
                 Email*
-                <input type="email" name="email" placeholder="" required/>
+                <input type="email" id="email" name="email" placeholder="" required/>
               </label>
               <label>
                 Telefone de contato*
-                <input type="tel" name="telefone" placeholder="" required/>
+                <input type="tel" id="telefone" name="telefone" placeholder="" required/>
               </label>
             </fieldset>
 
@@ -162,26 +162,11 @@
           </form>
         </section>
       </main>
-      <footer class="footer">
-        <img src="./img/aviao.png"/>
-            <p class="footer__logo">viatour</p>
-            <address class="footer__adress">
-                <p>
-                    Av. Brigadeiro de Faria Lima - 5680
-                    </p>
-                <p> 
-                    Vila São José
-                </p>
-                <p>
-                    São José do Rio Preto - SP
-                </p>
-            </address>
-            <div class="footer__tel">
-                <p>(17) 3225-2967</p>
-                <p>(17) 3225-2967</p>
-            </div>
-      </footer>
+     <?php 
+      include('./php/footer.php');
+     ?>
     </div>
     <script type="module" src="./main.js"></script>
+    <script type="text/javascript" src="./modules/vanilla-masker.min.js"></script>
   </body>
 </html>

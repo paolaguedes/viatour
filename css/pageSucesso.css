@@ -1,0 +1,195 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  border: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5F8FA;
+}
+body::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: rgba(3, 152, 158, 0.2);
+  max-width: 1400px;
+  width: 100%;
+  height: 900px;
+  top: -500px;
+  left: -400px;
+  z-index: -1;
+  transform: rotate(-30deg);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 426px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.header__logo {
+  width: 200px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+}
+.header__menu {
+  display: flex;
+  gap: 10px;
+}
+.header__link {
+  color: #03989e;
+  font-size: 1.2rem;
+  transition: all 200ms;
+}
+@media (max-width: 426px) {
+  .header__link {
+    font-size: 1rem;
+  }
+}
+.header__link:hover {
+  opacity: 0.9;
+}
+
+.main {
+  margin: 70px 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.main__msg {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #03989e;
+  padding: 1rem 0.5rem;
+  color: #fff;
+  border-radius: 20px;
+}
+.main .trip {
+  margin: 70px 0;
+}
+.main .trip__title {
+  font-size: 1.3rem;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+.main .trip__imgs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.main .trip__imgs .img {
+  background: none;
+  position: relative;
+  transition: all 1s;
+}
+.main .trip__imgs .img:hover::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #fff;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(3, 152, 158, 0.8);
+  z-index: 2;
+}
+@media (max-width: 769px) {
+  .main .trip__imgs .img:hover::before {
+    font-size: 1.5rem;
+  }
+}
+.main .trip__imgs .img:nth-child(1):hover::before {
+  content: "Ideal para a família";
+}
+.main .trip__imgs .img:nth-child(2):hover::before {
+  content: "Ideal para os aventureiros";
+}
+.main .trip__imgs .img:nth-child(3):hover::before {
+  content: "Ideal para uma viagem em casal";
+}
+.main .trip__imgs .img img {
+  filter: drop-shadow(1px 1px 2px #03989e);
+  max-width: 1000px;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #03989e;
+  color: #03989e;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  margin: 4rem 0 0;
+  position: relative;
+}
+.footer img {
+  position: absolute;
+  width: 90px;
+  bottom: 0;
+  left: -20px;
+}
+.footer__adress p::selection {
+  background-color: white;
+  color: #03989e;
+  font-weight: 400;
+}
+.footer__logo {
+  font-size: 40px;
+}
+.footer__adress {
+  border-left: 1px solid white;
+  padding-left: 50px;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+}
+.footer__tel {
+  font-size: 13px;
+  font-weight: 300;
+  font-size: 15px;
+}
+.footer__tel p:first-of-type {
+  margin-bottom: 10px;
+}
+.footer__tel p::selection {
+  background-color: white;
+  color: #03989e;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=pageSucesso.css.map */

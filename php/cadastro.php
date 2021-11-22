@@ -18,6 +18,10 @@ $estado = filter_input(INPUT_POST, 'estado', FILTER_SANITIZE_STRING);
 $result = " INSERT INTO cliente (nome, dt_nasc,sexo,email,telefone,cep,rua,numero,complemento,cidade,estado) VALUES ('$nome','$dt_nasc','$sexo','$email','$telefone','$cep','$rua','$numero','$complemento','$cidade', '$estado') ";
 $resultado = mysqli_query($conexao, $result);
 
-include '../pages/cadastro.html';
+if (mysqli_insert_id($conexao)) {
+  header('Location: ../index.php');
+} else {
+  header('Location: ../cadastro.php');
+}
 
 ?>

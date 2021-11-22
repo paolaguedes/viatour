@@ -1,0 +1,80 @@
+@use './variables.scss';
+
+.main {
+  margin: 70px 0;
+  text-align: center;
+  font-size: 1.2rem;
+
+  &__msg {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: variables.$second-color;
+    padding: 1rem .5rem;
+    color: #fff;
+    border-radius: 20px;
+  }
+
+
+  .trip {
+    margin: 70px 0 ;
+
+    &__title {
+      font-size: 1.3rem;
+      display: inline-block;
+      margin-bottom:50px;
+    }
+
+    &__imgs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+
+
+      .img {
+        background: none;
+        position: relative;
+        transition: all 1s;
+
+        &:hover::before {
+          content:'';
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content:center;
+          font-size:3rem;
+          color: #fff;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background: rgba(3, 152, 158, .8);
+          z-index: 2;
+
+          @media(max-width: 769px){
+            font-size:1.5rem;
+          }
+        }
+
+        &:nth-child(1):hover::before {
+          content:'Ideal para a família';
+        }
+
+        &:nth-child(2):hover::before {
+          content:'Ideal para os aventureiros';
+        }
+
+        &:nth-child(3):hover::before {
+          content:'Ideal para uma viagem em casal';
+        }
+
+        img {
+          filter: drop-shadow(1px 1px 2px variables.$second-color);
+          max-width:1000px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
