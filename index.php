@@ -155,10 +155,10 @@
                 <input type="text" id="estado" name="estado" placeholder="" required/>
               </label>
             </fieldset>
-
-            <input class="cadastro__btn" type="reset" value="Limpar" />
-            <input class="cadastro__btn submit" type="submit" id="submit" value="Cadastrar" />
-
+              <div class="cadastro__btns">
+                <input type="reset" value="Limpar" />
+                <input class="submit" type="submit" id="submit" value="Cadastrar" />
+              </div>        
           </form>
         </section>
       </main>

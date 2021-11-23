@@ -214,9 +214,14 @@ button {
   margin: 1rem 0 0.3rem;
 }
 .cadastro input, .cadastro select {
-  height: 30px;
+  height: 40px;
   border-radius: 3px;
   padding: 0 5px;
+}
+@media (max-width: 769px) {
+  .cadastro input, .cadastro select {
+    height: 40px;
+  }
 }
 .cadastro__form {
   background: #03989e;
@@ -255,7 +260,31 @@ button {
   gap: 30px;
   flex-wrap: wrap;
 }
+@media (max-width: 769px) {
+  .cadastro__endereco {
+    flex-direction: column;
+  }
+}
 .cadastro__btn {
+  display: inline-block;
+  cursor: pointer;
+  margin: 1rem 0 0;
+  font-weight: 500;
+  font-size: 1rem;
+  width: 150px;
+  height: 40px;
+  color: #03989e;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+@media (max-width: 769px) {
+  .cadastro__btns {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.cadastro__btns input {
   display: inline-block;
   cursor: pointer;
   margin: 1rem 0 0;
@@ -267,7 +296,13 @@ button {
   border: 1px solid #fff;
   border-radius: 5px;
 }
-.cadastro__btn.submit {
+@media (max-width: 769px) {
+  .cadastro__btns input {
+    height: 48px;
+    width: 100%;
+  }
+}
+.cadastro__btns input.submit {
   color: #fff;
   background: #03989e;
 }

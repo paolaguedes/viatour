@@ -1,10 +1,9 @@
 @use './variables.scss';
+@use './mixins.scss';
 
 .hero {
   height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include mixins.flex-between;
   margin-bottom: 70px;
   gap: 100px;
 
