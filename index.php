@@ -105,7 +105,7 @@
               </label>
               <label>
                 Data de nascimento
-                <input type="date" name="dt_nasc" />
+                <input type="date" name="dt_nasc" max="<?php echo date('Y-m-d', strtotime('-18 year')); ?>" />
               </label>
               <label>
                 Sexo
